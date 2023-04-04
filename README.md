@@ -9,8 +9,9 @@ Como esse não foi o caso, resolvi eu mesmo criar essa API.
 * Trocada a API utilizada por uma do Pokémon, uma vez que a do IMDb estava indisponível;
 * Criado um controller, de forma que fosse possível receber requisições HTTP;
 * Tratadas excessões deixadas de lado durante as aulas da Alura, de forma a retornar respostas mais amigáveis aos usuários;
-* Modularizado o projeto, de forma que seja possível implementar de forma fácil a geração de figurinhas a partir de outras APIs de tercceiros; 
+* Modularizado o projeto, de forma que seja possível implementar de forma fácil a geração de figurinhas a partir de outras APIs de tercceiros.
 
 ## Por fazer:
 * Tratar a resposta da API de acordo com a resposta recebida pela API de terceiros;
-* Implementar uma pequena base de dados, de forma que seja possível reconhecer quando uma figurinha já tiver sido gerada previamente, de forma a evitar retrabalho e melhorar a performance.
+* Implementar uma pequena base de dados, de forma que seja possível reconhecer quando uma figurinha já tiver sido gerada previamente, de forma a evitar retrabalho e melhorar a performance;
+* Implementar testes.
