@@ -11,7 +11,9 @@ import org.springframework.web.context.request.WebRequest;
 
 import com.github.caioorleans.excepions.ConnectionInterruptedException;
 import com.github.caioorleans.excepions.JsonParsingException;
+import com.github.caioorleans.excepions.NotFoundException;
 import com.github.caioorleans.excepions.StickerNotGeneratedException;
+import com.github.caioorleans.excepions.UnespectedErrorException;
 
 @ControllerAdvice
 @RestController
@@ -39,6 +41,26 @@ public class ResponseExceptionHandler {
 	
 	@ExceptionHandler(StickerNotGeneratedException.class)
 	public final ResponseEntity<ExceptionResponse> handleStickerNotGeneratedExceptions(
+			Exception ex, WebRequest request){
+		ExceptionResponse exceptionResponse = new ExceptionResponse(
+				new Date(),
+				ex.getMessage(),
+				request.getDescription(false));
+		return new ResponseEntity<>(exceptionResponse, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+	
+	@ExceptionHandler(NotFoundException.class)
+	public final ResponseEntity<ExceptionResponse> handleNotFoundExceptions(
+			Exception ex, WebRequest request){
+		ExceptionResponse exceptionResponse = new ExceptionResponse(
+				new Date(),
+				ex.getMessage(),
+				request.getDescription(false));
+		return new ResponseEntity<>(exceptionResponse, HttpStatus.NOT_FOUND);
+	}
+	
+	@ExceptionHandler(UnespectedErrorException.class)
+	public final ResponseEntity<ExceptionResponse> handleUnespectedErrorExceptions(
 			Exception ex, WebRequest request){
 		ExceptionResponse exceptionResponse = new ExceptionResponse(
 				new Date(),
