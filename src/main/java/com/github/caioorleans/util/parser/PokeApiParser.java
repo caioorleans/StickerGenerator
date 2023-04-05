@@ -27,6 +27,9 @@ public class PokeApiParser implements IParser{
 					.path("home")
 					.path("front_default")
 					.asText());
+			if(info.getTitle().isBlank() || info.getUrlImage().isBlank()) {
+				throw new JsonParsingException();
+			}
 			return info;
 		} catch (JsonProcessingException e) {
 			throw new JsonParsingException();

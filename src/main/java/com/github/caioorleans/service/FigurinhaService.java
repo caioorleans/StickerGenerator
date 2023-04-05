@@ -4,5 +4,7 @@ import java.io.InputStream;
 
 public interface FigurinhaService {
 
-	public InputStream gerarFigurinha(String complementoUrl);
+	public String gerarFigurinha(String complementoUrl);
+	
+	public InputStream buscarFigurinha(String complementoUrl);
 }

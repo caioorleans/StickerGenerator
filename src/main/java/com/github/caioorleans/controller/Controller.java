@@ -25,7 +25,7 @@ public class Controller {
 	@ResponseBody
 	public ResponseEntity<InputStreamResource> get(@PathVariable("name") String name){
 		
-		InputStream input = pokeService.gerarFigurinha(name);
+		InputStream input = pokeService.buscarFigurinha(name);
 		
 		return ResponseEntity.ok()
 			      .contentType(MediaType.IMAGE_PNG)

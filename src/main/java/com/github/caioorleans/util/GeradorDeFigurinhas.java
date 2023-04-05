@@ -38,7 +38,7 @@ public class GeradorDeFigurinhas {
 			if(text == null) {
 				text = "Imagem top";
 			}
-			graphics.setColor(Color.YELLOW);
+			graphics.setColor(Color.BLACK);
 			FontMetrics fm = graphics.getFontMetrics();
 			graphics.drawString(text, (largura - fm.stringWidth(text))/2, novaAltura - 100);
 
