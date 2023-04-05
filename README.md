@@ -10,8 +10,8 @@ Como esse não foi o caso, resolvi eu mesmo criar essa API.
 * Criado um controller, de forma que fosse possível receber requisições HTTP;
 * Tratadas excessões deixadas de lado durante as aulas da Alura, de forma a retornar respostas mais amigáveis aos usuários;
 * Modularizado o projeto, de forma que seja possível implementar de forma fácil a geração de figurinhas a partir de outras APIs de tercceiros;
-* Tratar a resposta da API de acordo com a resposta recebida pela API de terceiros.
+* Tratadas aa respostas da API de acordo com a resposta recebida pela API de terceiros;
+* Implementada uma pequena base de dados, de forma que seja possível reconhecer quando uma figurinha já tiver sido gerada previamente, de forma a evitar retrabalho e melhorar a performance;
 
 ## Por fazer:
-* Implementar uma pequena base de dados, de forma que seja possível reconhecer quando uma figurinha já tiver sido gerada previamente, de forma a evitar retrabalho e melhorar a performance;
 * Implementar testes.
